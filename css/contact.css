@@ -1,0 +1,320 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.html{
+    font-size: 62.5%;
+}
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background: rgb(255,127,80);
+    color: #000;
+    opacity: 0.85;
+    z-index: 100;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.menu-items{
+    order: 2;
+    display: flex;
+}
+.logo{
+    order: 1;
+    font-size: 2.3rem;
+}
+
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.navbar a{
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover{
+    color: #fff;
+}
+
+@media (max-width: 768px){
+    .navbar{
+        opacity: 0.95;
+    }
+
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines{
+        display: block;
+    }
+
+    .navbar-container{
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+
+    .navbar-container input[type="checkbox"]{
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .navbar-container .hamburger-lines{
+        display: block;
+        height: 28px;
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-container .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333;
+    }
+    
+    .navbar-container .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line2{
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .menu-items{
+        padding-top: 100px;
+        background: #fff;
+        color: #fff;    
+        height: 100vh;
+        max-width: 300px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 40px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow:  5px 0px 10px 0px #aaa;
+        overflow: scroll;
+    }
+
+    .navbar .menu-items li{
+        margin-bottom: 1.8rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .logo{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 2.5rem;
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .menu-items{
+        transform: translateX(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        transform: scaleY(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+
+}
+
+@media (max-width: 500px){
+    .navbar-container input[type="checkbox"]:checked ~ .logo{
+        display: none;
+    }
+}
+
+section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  section.contact-us #contact {
+    position: relative;
+    display: block;
+    width: 380px;
+    height: auto;
+    background-color: #fff;
+    padding: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  section.contact-us .section-heading {
+    position: relative; 
+    display: block;
+    margin: auto;
+  }
+  
+  .section-heading h4 {
+    line-height: 40px;
+    font-size: 28px;
+    font-weight: 900;
+    color: #dc8cdb;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  
+  input, textarea {
+    width: 350px;
+    position: relative;
+    display: block;
+    background-color: #f4f7fb;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    box-shadow: none;
+    border-radius: 5px;
+    outline-color: #9e9e9e;
+  }
+  
+  input {
+    height: 40px;
+    padding: 0px 15px;
+  }
+  
+  textarea {
+    min-height: 140px;
+    max-height: 180px;
+    padding: 15px;
+    resize: none;
+  }
+  
+  .contact-us span {
+    height: 20px;
+      font-size: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .valid_info_name, .valid_info_email, .valid_info_message{
+    display: inline-block;
+    font-size: 13px;
+    margin: 5px 2px;
+  }
+  
+  .valid {
+    border: 2px solid green;
+    outline-color: green;
+  }
+  
+  .invalid {
+    border: 2px solid red;
+    outline-color: red;
+  }
+  
+  .btn {
+    display: inline-flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  #form-submit {
+    position: relative;
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    background: rgb(219,138,222);
+    background: linear-gradient(-145deg, rgba(219,138,222,1) 0%, rgba(246,191,159,1) 100%);
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s;
+    transition: all .3s;
+  }
+  
+  #form-submit:disabled {
+    border: 1px solid #9e9e9e;
+    background: transparent;
+    color: #9e9e9e;
+    transition: none;
+    transform: none;
+    cursor: default;
+  }
+  
+  #form-submit:hover:disabled{
+    border: 1px solid #9e9e9e;
+    color: #9e9e9e;
+    background: transparent;
+    transition: none;
+    transform: none;
+    cursor: default;
+  }
+  
+  button:active {
+      transform: scale(0.95);
+  }
+  
+  button:focus {
+      outline: none;
+  }
+  
+  button.ghost {
+      background-color: transparent;
+      border-color: #FFFFFF;
+  }

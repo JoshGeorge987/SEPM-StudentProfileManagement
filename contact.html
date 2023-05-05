@@ -8,5 +8,52 @@
     <title>StatCheck</title>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="navbar-container container" style="padding:20px;margin-top:30px;">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="home.html">Attendance</a></li>
+                <li><a href="mark.html">Marks</a></li>
+                <li><a href="timetable.html">Timetable</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="study.html">Study Material</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <h1 class="logo">StatCheck</h1>
+        </div>
+    </nav>
+    <section class="contact-us" id="contact-section">
+        <form id="contact" action="" method="post">
+         
+          <div class="section-heading">
+            <h4>Contact us</h4>
+          </div>
     
+          <div class="inputField">
+            <input type="name" name="name" id="name" placeholder="Your name" autocomplete="on" required>
+            <span class="valid_info_name"></span>
+          </div>
+    
+          <div class="inputField">
+            <input type="Email" name="email" id="email" placeholder="Your email" required="" />
+            <span class="valid_info_email"></span>
+          </div>
+    
+          <div class="inputField">
+            <textarea name="message" id="message" placeholder="Your message"></textarea>
+            <span class="valid_info_message"></span>
+          </div>
+    
+          <div class="inputField btn">
+            <button type="submit" id="form-submit" class="main-gradient-button" disabled>Send a message</button>
+          </div>
+    
+        </form>
+      </section>
 </body>
+</html>
