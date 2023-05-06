@@ -179,3 +179,10 @@
         display: none;
     }
 }
+
+.h5 {
+    justify-content: center;
+    justify-items: center;
+    color:#000;
+    padding-top: 20px;
+}
