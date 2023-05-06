@@ -27,33 +27,42 @@
             <h1 class="logo">StatCheck</h1>
         </div>
     </nav>
-    <section class="contact-us" id="contact-section">
-        <form id="contact" action="" method="post">
-         
-          <div class="section-heading">
-            <h4>Contact us</h4>
-          </div>
-    
-          <div class="inputField">
-            <input type="name" name="name" id="name" placeholder="Your name" autocomplete="on" required>
-            <span class="valid_info_name"></span>
-          </div>
-    
-          <div class="inputField">
-            <input type="Email" name="email" id="email" placeholder="Your email" required="" />
-            <span class="valid_info_email"></span>
-          </div>
-    
-          <div class="inputField">
-            <textarea name="message" id="message" placeholder="Your message"></textarea>
-            <span class="valid_info_message"></span>
-          </div>
-    
-          <div class="inputField btn">
-            <button type="submit" id="form-submit" class="main-gradient-button" disabled>Send a message</button>
-          </div>
-    
-        </form>
-      </section>
+    <div class="container">
+      <div class="row">
+              <h1>Contact us</h1>
+      </div>
+      <div class="row">
+              <h4 style="text-align:center">We'd love to hear from you!</h4>
+      </div>
+      <div class="row input-container">
+              <div class="col-xs-12">
+                  <div class="styled-input wide">
+                      <input type="text" required />
+                      <label>Name</label> 
+                  </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                  <div class="styled-input">
+                      <input type="text" required />
+                      <label>Email</label> 
+                  </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                  <div class="styled-input" style="float:right;">
+                      <input type="text" required />
+                      <label>Phone Number</label> 
+                  </div>
+              </div>
+              <div class="col-xs-12">
+                  <div class="styled-input wide">
+                      <textarea required></textarea>
+                      <label>Message</label>
+                  </div>
+              </div>
+              <div class="col-xs-12">
+                  <div class="btn-lrg submit-btn">Send Message</div>
+              </div>
+      </div>
+  </div>
 </body>
 </html>
